@@ -1,0 +1,15 @@
+<div class="d-flex justify-content-center mt-5"  data-bs-theme="dark">
+  <div class=" w-25">
+    <div class="d-flex">
+      <input [(ngModel)]="toDoValue" type="text" class="form-control" placeholder="To-Do" aria-label="To-Do">
+      <button (click)="save()" type="button" class="btn btn-success ms-3">Save</button>
+    </div>
+    <ul class="list-group mt-3">
+      <li *ngFor="let toDoes of toDoList; let i = index" class="list-group-item">
+
+        <button (click)="deleteItem(i)" type="button" class="btn-close me-2" style="font-size: 10px" aria-label="Close"></button>
+
+        {{toDoes}}</li>
+    </ul>
+  </div>
+</div>
